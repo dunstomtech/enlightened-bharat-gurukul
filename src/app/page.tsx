@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { FAQ } from "@/components/home/FAQ";
 import { 
   BookOpen, GraduationCap, PersonStanding, Flower2, 
   Eye, PenTool, Lightbulb, Share2, Target, Calendar, 
@@ -27,7 +28,7 @@ export default function Home() {
           <Link href="#community" className="text-slate-300 hover:text-yellow-400 transition-colors duration-300">Community</Link>
         </div>
         <Link 
-          href="#admissions" 
+          href="/apply" 
           className="bg-yellow-500 text-[#0A192F] px-6 py-2.5 rounded font-bold hover:bg-yellow-400 active:scale-95 transition-all duration-200 shadow-md shadow-yellow-500/20"
         >
           Apply Now
@@ -57,7 +58,7 @@ export default function Home() {
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link 
-                href="#admissions" 
+                href="/apply" 
                 className="text-center bg-[#1E3A8A] text-white px-8 py-3.5 rounded font-bold hover:bg-blue-900 active:scale-95 transition-all duration-200 shadow-lg shadow-blue-900/20"
               >
                 Apply Now
@@ -265,7 +266,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 9. ADMISSIONS SECTION */}
+        {/* 8. ADMISSIONS SECTION */}
         <section id="admissions" className="py-24 bg-white border-t border-slate-100 px-4">
           <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-2xl shadow-slate-200 overflow-hidden flex flex-col md:flex-row border border-slate-100">
             <div className="md:w-1/2 relative min-h-[300px] md:min-h-auto">
@@ -303,12 +304,15 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                <button className="flex-1 bg-yellow-500 text-[#0A192F] py-3.5 rounded font-bold hover:bg-yellow-400 active:scale-95 transition-all shadow-md">Apply Now</button>
+                <Link href="/apply" className="flex-1 bg-yellow-500 text-[#0A192F] py-3.5 rounded font-bold hover:bg-yellow-400 active:scale-95 transition-all shadow-md text-center">Apply Now</Link>
                 <button className="flex-1 bg-white text-[#0A192F] border-2 border-slate-200 py-3.5 rounded font-bold hover:bg-slate-50 hover:border-[#0A192F] active:scale-95 transition-all">Contact Us</button>
               </div>
             </div>
           </div>
         </section>
+
+        {/* 9. FAQ SECTION */}
+        <FAQ />
 
         {/* 10. FINAL CTA */}
         <section className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white py-20 px-6 md:px-12 text-center relative overflow-hidden">
@@ -316,9 +320,9 @@ export default function Home() {
           <div className="relative z-10">
             <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">Build a Strong Mind, Body, and Future</h2>
             <p className="mb-10 max-w-2xl mx-auto text-orange-50 text-lg">Give your child an education that goes beyond books and prepares them for life.</p>
-            <button className="bg-[#0A192F] text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-slate-800 active:scale-95 transition-all shadow-2xl hover:shadow-black/20">
+            <Link href="/apply" className="inline-block bg-[#0A192F] text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-slate-800 active:scale-95 transition-all shadow-2xl hover:shadow-black/20">
               Apply for Admission Today
-            </button>
+            </Link>
           </div>
         </section>
       </main>
@@ -351,7 +355,7 @@ export default function Home() {
             <ul className="space-y-3 text-sm">
               <li><Link href="#" className="hover:text-yellow-400 transition-colors">Admissions Info</Link></li>
               <li><Link href="#" className="hover:text-yellow-400 transition-colors">Eligibility</Link></li>
-              <li><Link href="#admissions" className="text-yellow-400 font-bold hover:text-yellow-300 transition-colors">Apply Now</Link></li>
+              <li><Link href="/apply" className="text-yellow-400 font-bold hover:text-yellow-300 transition-colors">Apply Now</Link></li>
             </ul>
           </div>
           
