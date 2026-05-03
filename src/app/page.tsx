@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FAQ } from "@/components/home/FAQ";
+import { CampusMap } from "@/components/home/CampusMap"; // Add this import
 import { 
   BookOpen, GraduationCap, PersonStanding, Flower2, 
   Eye, PenTool, Lightbulb, Share2, Target, Calendar, 
@@ -313,6 +314,7 @@ export default function Home() {
 
         {/* 9. FAQ SECTION */}
         <FAQ />
+        <CampusMap />
 
         {/* 10. FINAL CTA */}
         <section className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white py-20 px-6 md:px-12 text-center relative overflow-hidden">
